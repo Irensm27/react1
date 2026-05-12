@@ -1,3 +1,4 @@
+import './CourseComponent.css'
 import type {FC} from "react";
 import type {ICourseModel} from "../../models/CourseModel.ts";
 
