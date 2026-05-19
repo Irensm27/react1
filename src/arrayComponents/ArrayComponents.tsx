@@ -6,9 +6,7 @@ export const ArrayComponents = () => {
         <div>
             {coursesArray.map((value, index) => {
                 return (
-                    <ArrayComponent key={index} item={value}>
-
-                    </ArrayComponent>
+                    <ArrayComponent key={index} item={value}/>
                 );
             })}
         </div>
