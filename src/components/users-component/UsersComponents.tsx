@@ -6,6 +6,7 @@ import {getUsers} from "../../services/api.service.ts";
 
 const UsersComponents = () => {
     const [users, setUsers] = useState<IUser[]>([])
+    const [item, setItem] = useState<IUser | null>(null)
     useEffect(() => {
         getUsers()
             .then(response => {
@@ -16,10 +17,15 @@ const UsersComponents = () => {
         }
     },[])
 
+    const foo = (item:IUser) =>{
+        setItem(item)
+    }
+
     return (
         <div>
+            {JSON.stringify(item)}
             {
-                users.map(user => <UserComponent key={user.id} item = {user}/>)
+                users.map(user => <UserComponent foo= {foo} key={user.id} item = {user}/>)
             }
         </div>
     );
