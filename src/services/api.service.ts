@@ -10,6 +10,4 @@ export const getUsers = async ():Promise<IUser[]> => {
 export const getUser = async ():Promise<IUser> => {
    return  await fetch(baseUrl + '/' )
         .then(value => value.json())
-
-
 }
