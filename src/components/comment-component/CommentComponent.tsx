@@ -6,11 +6,13 @@ export interface ICommentProps {
 }
 export const CommentComponent: FC<ICommentProps> = ({comment: id, name, email,body}) => {
     return
-    {
+    (
         <div>
             <h2>{id}</h2>
+            <h2>{name}</h2>
+
 
 
         </div>
-    }
+    )
 }
