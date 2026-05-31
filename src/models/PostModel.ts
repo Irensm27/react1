@@ -1,13 +1,13 @@
 export interface IPostModel  {
-    id: number,
-    title: string,
-    body: string,
-    tags: string[],
-    reactions: IPostModelReactions,
-    views:number,
+    id: number;
+    title: string;
+    body: string;
+    tags: string[];
+    reactions: IPostModelReactions;
+    views:number;
     userId: number
 }
 export interface IPostModelReactions  {
-    likes: number
+    likes: number;
     dislikes: number
 }
