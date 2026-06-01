@@ -7,13 +7,14 @@ import APage from "./pages/APage.tsx";
 import BPage from "./pages/BPage.tsx";
 import HomePage from "./pages/HomePage.tsx";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
         path:'/', element:<MainLayout/>,
         children:[
+            {path:'', element:<HomePage />},
             {path:'a', element:<APage/>},
             {path:'b', element:<BPage/>},
-            {path:'', element:<HomePage/>},
+
         ]
     },
 ])
