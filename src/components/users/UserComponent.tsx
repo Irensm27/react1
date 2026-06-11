@@ -9,7 +9,7 @@ interface IUserProps {
 export const UserComponent:FC<IUserProps> = ({item}) => {
     const navigate = useNavigate();
     const handleOnClick=() =>{
-        navigate('details', {state:item});
+        navigate('posts/' +item.id , {state:item});
     }
     return (
         <div>

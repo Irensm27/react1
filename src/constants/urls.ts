@@ -3,5 +3,10 @@ export const urls = {
     users: {
         allUsers: baseUrl + '/users',
     },
-    posts: {}
+    posts: {
+        allPosts: baseUrl + '/posts',
+        byId:(id:number) => baseUrl + '/' + id,
+        userPostsById:(id:number) => baseUrl + '/posts?userId=' + id,
+
+    }
 }
