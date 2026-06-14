@@ -7,11 +7,11 @@ const JsonPlaceholderUsersComponent = () => {
     const [users, setUser] = useState<IUserJsonPlaceholder[]>([]);
 
     useEffect(() => {
-        async function fetchUsers(){
+        async function fetchUsersJsonPlaceHolder(){
             const allUsers = await getUsersJsonPlaceHolder();
             setUser(allUsers);
         }
-        fetchUsers();
+        fetchUsersJsonPlaceHolder();
     },[])
 
     return (
