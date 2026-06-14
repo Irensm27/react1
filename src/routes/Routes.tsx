@@ -1,12 +1,12 @@
 
 import {createBrowserRouter} from "react-router-dom";
-import UsersDummyjsonComponent from "../components/users/UsersDummyjsonComponent.tsx";
 import PostsDummyJsonComponent from "../components/posts/PostsDummyJsonComponent.tsx";
 import CommentsJSPlaceholderComponent from "../components/comments/CommentsJSPlaceholderComponent.tsx";
 import Layout from "../layout/Layout.tsx";
 import HomePage from "../pages/homepage/HomePage.tsx";
 import JsonPlaceHolderUserPage from "../pages/JsonPlaceHolderUserPage.tsx";
 import JsonPlaceHolderPostPage from "../pages/JsonPlaceHolderPostPage.tsx";
+import DummyJsonUserPage from "../pages/DummyJsonUserPage.tsx";
 
 
 export const routes = createBrowserRouter([
@@ -15,13 +15,13 @@ export const routes = createBrowserRouter([
             { index: true, element: <HomePage/> },
             {path: 'jsonplaceholder', children: [
                     { path: 'users', element: <JsonPlaceHolderUserPage/> },
-                    { path: 'posts', element: <JsonPlaceHolderPostPage /> },
-                    { path: 'comments', element: <CommentsJSPlaceholderComponent/>}
+                    { path: 'posts', element: <JsonPlaceHolderPostPage /> }
                 ]
             },
             {path: 'dummyjson', children: [
-                    { path: 'users', element: <UsersDummyjsonComponent /> },
+                    { path: 'users', element: <DummyJsonUserPage /> },
                     { path: 'posts', element: <PostsDummyJsonComponent /> },
+                    { path: 'comments', element: <CommentsJSPlaceholderComponent/>}
                 ]
             },
 

@@ -31,7 +31,6 @@ const JsonPlaceholderUserComponent:FC<JsonUsersTypeProps> = ({user}) => {
                 <p><i>{user.company.catchPhrase}</i></p>
                 <p>{user.company.bs}</p>
             </div>
-            );
         </div>
     );
 };
