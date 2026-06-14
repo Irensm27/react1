@@ -6,7 +6,9 @@ export const getUsersJsonPlaceHolder = async ():Promise<IUserJsonPlaceholder[]> 
         return await fetch(urlsJs.users.allUsers)
         .then((response) => response.json())
     }
-    export const getPostsJsonPlaceHolder = async ():Promise<IPostJsonPlaceholder[]> => {
+
+export const getPostsJsonPlaceHolder = async ():Promise<IPostJsonPlaceholder[]> => {
         return await fetch(urlsJs.posts.allPosts)
         .then((response) => response.json())
     }
+
