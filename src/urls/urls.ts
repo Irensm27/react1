@@ -7,9 +7,6 @@ export const urlsJs = {
     },
     posts: {
         allPosts: baseUrlJson + '/posts',
-    },
-    comments:{
-        allComments: baseUrlJson + '/comments',
     }
 };
 
@@ -19,5 +16,8 @@ export const urlsDummy = {
     },
     posts:{
         allPosts: baseUrlDummy + '/posts',
+    },
+    comments:{
+        allComments: baseUrlJson + '/comments',
     }
 };
