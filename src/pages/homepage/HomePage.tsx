@@ -1,5 +1,5 @@
 
-const HomePageComponent = () => {
+const HomePage = () => {
     return (
         <div>
             Home
@@ -7,4 +7,4 @@ const HomePageComponent = () => {
     );
 };
 
-export default HomePageComponent;
+export default HomePage;
