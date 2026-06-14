@@ -6,7 +6,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const routes = createBrowserRouter([
     {
-        path:'/', element:<Main/>, children:{
+        path:'/' element:<Main/>, children:{
+            path:
 
         }
     }
