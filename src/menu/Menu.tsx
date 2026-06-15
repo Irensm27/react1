@@ -13,7 +13,7 @@ const Menu = () => {
                 <li><Link to='/jsonplaceholder/posts'>Posts JSON</Link></li>
                 <li><Link to='/dummyjson/posts'>Posts Dummy</Link></li>
 
-                <li><Link to='/jsonplaceholder/comments'>Comments JSON</Link></li>
+                <li><Link to='/dummyjson/comments'>Comments JSON</Link></li>
             </ul>
         </div>
     );

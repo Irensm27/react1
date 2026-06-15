@@ -33,6 +33,6 @@ export const getPostsDummyJson = async ():Promise<IPostDummyJson[]>=>{
 export const getCommentsDummyJson = async ():Promise<ICommentDummyJson[]>=>{
     const responseCommentsDummyJson:IDummyJsonResponseComments = await fetch(urlsDummy.comments.allComments)
         .then((response) => response.json())
-    return responseCommentsDummyJson.comments;
+        return responseCommentsDummyJson.comments;
 }
 
