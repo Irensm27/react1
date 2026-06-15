@@ -18,6 +18,6 @@ export const urlsDummy = {
         allPosts: baseUrlDummy + '/posts',
     },
     comments:{
-        allComments: baseUrlJson + '/comments',
+        allComments: baseUrlDummy + '/comments',
     }
 };
