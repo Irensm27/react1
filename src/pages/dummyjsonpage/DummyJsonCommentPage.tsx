@@ -1,5 +1,5 @@
 import DummyJsonCommentsComponent
-    from "../components/dummyjsoncomponents/commentcomponents/DummyJsonCommentsComponent.tsx";
+    from "../../components/dummyjsoncomponents/commentcomponents/DummyJsonCommentsComponent.tsx";
 
 
 const DummyJsonCommentPage = () => {

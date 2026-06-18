@@ -1,5 +1,5 @@
 import JsonPlaceholderUsersComponent
-    from "../components/jsonplaceholdercomponents/usercomponents/JsonPlaceholderUsersComponent.tsx";
+    from "../../components/jsonplaceholdercomponents/usercomponents/JsonPlaceholderUsersComponent.tsx";
 
 
 const JsonPlaceHolderUserPage = () => {

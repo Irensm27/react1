@@ -1,5 +1,5 @@
 import JsonPlaceholderPostsComponent
-    from "../components/jsonplaceholdercomponents/postcomponents/JsonPlaceholderPostsComponent.tsx";
+    from "../../components/jsonplaceholdercomponents/postcomponents/JsonPlaceholderPostsComponent.tsx";
 
 
 const JsonPlaceHolderPostPage = () => {

@@ -1,4 +1,4 @@
-import DummyJsonPostsComponent from "../components/dummyjsoncomponents/postcomponents/DummyJsonPostsComponent.tsx";
+import DummyJsonPostsComponent from "../../components/dummyjsoncomponents/postcomponents/DummyJsonPostsComponent.tsx";
 
 const DummyJsonPostPage = () => {
     return (
