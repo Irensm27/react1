@@ -1,9 +1,10 @@
+import UsersPage from "../pages/UsersPage.tsx";
 
 
 const MainLayout = () => {
     return (
         <div>
-            MainLayout
+            <UsersPage/>
         </div>
     );
 };
