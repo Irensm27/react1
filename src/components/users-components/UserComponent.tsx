@@ -7,15 +7,13 @@ interface UserComponentProps {
 }
 const UserComponent:FC<UserComponentProps> = ({user}) => {
     const navigation = useNavigate();
-    const onButtonClickNavigate = (id:number) => {
-        navigation('/users/'+id+ '/carts')}
+    const onButtonClickNavigate = () => {
+        navigation('/users/'+user.id+ '/carts')}
 
     return (
         <div className='my-5 flex items-center gap-3'>
             <p>Name: {user.firstName} Email: {user.email}</p>
-            <button className='border-2 bg-amber-200 px-2 py-1' onClick={()=> {
-            onButtonClickNavigate(user.id)}
-            }>
+            <button className='border-2 bg-amber-200 px-2 py-1' onClick={onButtonClickNavigate}>
                 click me
             </button>
         </div>
