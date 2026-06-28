@@ -1,4 +1,5 @@
-import UsersComponent from "../components/UsersComponent.tsx";
+import UsersComponent from "../components/user-components/UsersComponent.tsx";
+
 
 
 const UserPage = () => {
