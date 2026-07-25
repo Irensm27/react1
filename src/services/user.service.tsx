@@ -11,3 +11,13 @@ export const getAllUsers = async ():Promise<void> => {
     const response = await axiosInstance.get<IUser[]>('/users');
     console.log(response);
 }
+
+axiosInstance.interceptors.request.use((request)=> {
+    console.log(request);
+    return request;
+})
+
+axiosInstance.interceptors.response.use((response)=> {
+    console.log(response);
+    return response;
+})
