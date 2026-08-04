@@ -1,4 +1,4 @@
-import type {ICar} from "../models/Cars.ts";
+import type {ICar} from "../../models/Cars.ts";
 import type {FC} from "react";
 
 export interface ICarProps {

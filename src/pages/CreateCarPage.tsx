@@ -1,10 +1,9 @@
+import CreateCarsComponent from "../components/CreateCarsComponent.tsx";
 
 
 const CreateCarPage = () => {
     return (
-        <div>
-            CreateCarPage
-        </div>
+        <CreateCarsComponent/>
     );
 };
 
