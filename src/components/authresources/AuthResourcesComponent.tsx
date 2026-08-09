@@ -9,7 +9,6 @@ const AuthResourcesComponent = () => {
         refresh()
             .then(() => loadAuthProducts())
             .then(value => console.log(value)); // після помилки(якщо вона буде) викликали ф-цію, яка дає рефреш токен, з ним знову викликали всі продуки та вивели в консоль
-
     },[])
     return (
         <div>
