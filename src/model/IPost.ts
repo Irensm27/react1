@@ -1,6 +1,6 @@
 export interface IPost{
     id:number;
-    tittle:string;
+    title:string;
     body:string;
 
 }
