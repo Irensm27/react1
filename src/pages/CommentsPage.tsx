@@ -9,4 +9,6 @@ const CommentsPage = () => {
     );
 };
 
+//у всі пейджі передаємо відповідні компоненти для відображення
+
 export default CommentsPage;
