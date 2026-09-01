@@ -6,11 +6,14 @@ import UserComponent from "./UserComponent.tsx";
 
 
 const UsersComponent = () => {
-    const dispatch = useAppDispatch();
+    //компонент запускає завантаження користувачів та отримує їх з Redux Store для відображення списку
+    const dispatch = useAppDispatch();//створюємо діспатч для запуску actions та thunks
     const users = useAppSelector((state=> state.userStoreSlice.users));
+    //отримуємо юзерів через useAppSelector звертаючись до них через userStoreSlice
     useEffect(() => {
         dispatch(userActions.loadUsers())
     },[])
+    // Запускаємо thunk для завантаження коментарів
     return (
         <div>
             {
@@ -19,5 +22,6 @@ const UsersComponent = () => {
         </div>
     );
 };
+//перебираємо масив юзерів, для кожного з них створюємо UserComponent, через який будемо їх відображати
 
 export default UsersComponent;

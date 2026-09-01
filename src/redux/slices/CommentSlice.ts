@@ -1,45 +1,46 @@
-import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import type {IComment} from "../../model/IComment.ts";
+import {createAsyncThunk, createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import {commentService} from "../../services/api.service.ts";
 
-
-type CommentSliceType={
+type CommentSliceType = {
     comments:IComment[];
-}//тип для CommentSlice
+    error:string | null;
+}//тип для CommentSlice, вказуємо масив коментарів та поле для помилки
 
-const initCommentSliceState:CommentSliceType = {comments:[]};//створюємо початковий стан для слайсу коментарів(поки що пустий масив), вказуємо його тип
+const initCommentSliceState:CommentSliceType = {
+    comments:[],
+    error:null
+};//створюємо початковий стан для слайсу коментарів: масив коментарів поки що пустий, помилки немає
 
 const loadComments = createAsyncThunk('loadComments', async (_, thunkAPI)=>{
     try {
         const comments = await commentService.getAllComments();
-        console.log(comments)
         return thunkAPI.fulfillWithValue(comments);
-    } catch (e) {
-        console.log(e)
+    } catch {
         return thunkAPI.rejectWithValue('error');
     }
 
-});
-//створюємо thunk для завантаження коментарів, вказуємо назву та асинхронність функції, робимо перевірку: отримуємо коментарі та виводимо в консоль,
-//якщо запит успішний передаємо дані в fulfilled
-//якщо помилка - виводимо її в консоль та передаємо повідомлення про неї в rejected
+});//створюємо thunk для завантаження коментарів, вказуємо назву та асинхронність функції
+//отримуємо коментарі за допомогою commentService
+//якщо запит успішний - передаємо отримані коментарі в fulfilled
+//якщо виникла помилка - передаємо повідомлення про помилку в rejected
 
-export const commentSlice= createSlice({// створюємо слайс для коментарів
+export const commentSlice = createSlice({//створюємо слайс для коментарів
     name:'commentSlice',
-    initialState: initCommentSliceState,//вказуємо її початковий стан
+    initialState: initCommentSliceState,//вказуємо його початковий стан
     reducers:{},
     extraReducers: builder => builder
         .addCase(loadComments.fulfilled, (state, action:PayloadAction<IComment[]>)=>{
-            state.comments=action.payload//кладемо отримані коментарі в Redux
+            state.comments = action.payload;//кладемо отримані коментарі в Redux
+            state.error = null;//якщо запит успішний - очищаємо попередню помилку
         })
-        .addCase(loadComments.rejected, (state, action) => {
-            console.log(state);
-            console.log(action)
+        .addCase(loadComments.rejected, (state, action)=>{
+            state.error = action.payload as string;//якщо запит завершився помилкою - записуємо повідомлення про помилку в Redux
         })
-});
-//extraReducers використовуємо для обробки результатів. додаємо кейси: якщо loadComments успішно виконався - отримуємо коментарі і записуємо їх у стейт(вказуємо їх типізацію)
-//якщо помилка - виводимо її в консоль
 
-export const commentsAction = {...commentSlice.actions, loadComments}// експортуємо для подальшого використання в компонентах
+});//extraReducers використовуємо для обробки результатів loadComments
+//якщо loadComments успішно виконався - отримуємо коментарі і записуємо їх у state.comments
+//якщо виникла помилка - записуємо її в state.error
 
-// в інших двох слайсах виконуємо ті самі дії
+export const commentsAction = {...commentSlice.actions, loadComments};//збираємо actions нашого слайсу та loadComments в один об'єкт commentsAction та експортуємо
+

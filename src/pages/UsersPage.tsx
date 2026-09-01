@@ -8,5 +8,5 @@ const UsersPage = () => {
         </div>
     );
 };
-
+//створюємо сторінку UsersPage, в якій відображаємо компонент UsersComponent з усіма юзерами
 export default UsersPage;

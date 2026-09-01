@@ -6,6 +6,7 @@ import CommentComponent from "./CommentComponent.tsx";
 
 
 const CommentsComponent = () => {
+    //компонент запускає завантаження коментарів та отримує їх з Redux Store для відображення списку
     const dispatch = useAppDispatch();//створюємо діспатч для запуску actions та thunks
     const comments = useAppSelector(state => state.commentStoreSlice.comments);
     //отримуємо коментарі через useAppSelector звертаючись до них через commentStoreSlice

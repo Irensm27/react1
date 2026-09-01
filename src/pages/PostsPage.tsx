@@ -8,5 +8,5 @@ const PostsPage = () => {
         </div>
     );
 };
-
+//створюємо сторінку PostsPage, в якій відображаємо компонент PostsComponent з усіма постами
 export default PostsPage;

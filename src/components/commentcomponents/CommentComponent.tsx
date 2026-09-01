@@ -8,6 +8,7 @@ interface ICommentProps {
 }//створюємо пропс для наших коментарів та передаємо comment як аргумент в функцію нижче і там вказуємо типізацію
 
 const CommentComponent:FC<ICommentProps> = ({comment}) => {
+    //компонент для відображення інформації про один коментар
     return (
         <div className="mb-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
             <h3 className="mb-2 text-lg font-semibold text-gray-800">

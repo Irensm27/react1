@@ -8,7 +8,7 @@ const CommentsPage = () => {
         </div>
     );
 };
+//створюємо сторінку CommentsPage, в якій відображаємо компонент CommentsComponent з усіма коментарями
 
-//у всі пейджі передаємо відповідні компоненти для відображення
 
 export default CommentsPage;
