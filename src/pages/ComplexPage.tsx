@@ -6,7 +6,8 @@ import {commentsAction} from "../redux/slices/CommentSlice.ts";
 
 
 const ComplexPage = () => {
-    const dispatch = useAppDispatch();//// створюємо dispatch, // за допомогою нього будемо запускати thunks
+    //компонент перевіряє, чи є користувачі, пости та коментарі в Redux Store, і якщо масиви порожні - запускає їх завантаження
+    const dispatch = useAppDispatch();// створюємо dispatch, за допомогою нього будемо запускати thunks
     const {commentStoreSlice:{comments}, userStoreSlice:{users}, postStoreSlice:{posts}} = useAppSelector(state => state);
     //використовуємо хук для отримання стейтів(масив коментарів, юзерів, постів), дістаємо наші дані з відповідних слайсів за допомогою деструктуризації
     useEffect(() => {

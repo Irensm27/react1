@@ -7,6 +7,7 @@ const Menu = () => {
         <nav className="border-b border-gray-200 bg-white shadow-sm">
             <ul className="mx-auto flex max-w-6xl items-center gap-2 px-6 py-4">
 
+                {/*створюємо пункт меню Users, який переводить нас на сторінку користувачів*/}
                 <li>
                     <Link
                         to="/users"
@@ -16,6 +17,7 @@ const Menu = () => {
                     </Link>
                 </li>
 
+                {/*створюємо пункт меню Posts, який переводить нас на сторінку постів*/}
                 <li>
                     <Link
                         to="/posts"
@@ -25,6 +27,7 @@ const Menu = () => {
                     </Link>
                 </li>
 
+                {/*створюємо пункт меню Comments, який переводить нас на сторінку коментарів*/}
                 <li>
                     <Link
                         to="/comments"
